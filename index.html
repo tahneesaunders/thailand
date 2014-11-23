@@ -5,11 +5,30 @@
     <title>Tahnee and Oscar in Thailand</title>
     <link href="style.css" rel="stylesheet" type="text/css" media="screen">
     <link href="normalize.css" rel="stylesheet" type="text/css" media="screen">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="./instafeed.min.js"></script>
+    
 </head>
+
+<script type="text/javascript">
+
+    var userFeed = new Instafeed({
+        get: 'tagged',
+        tagName: 'tothailand2014',
+        limit: 50,
+        clientId: 'f31838d9a91d4dd4b6744bd069a6ee55',
+        resolution: 'standard_resolution',
+        template: '<li class="instafeed"><a href="{{link}}"><img src="http://{{image}}" /></a></li>'
+    });
+    userFeed.run();
+
+</script>
     
 <body>
-<h1>Tahnee and Oscar in Thailand</h1>
+<h1>Tahnee and Oscar in Thailand Local</h1>
+
+<h3>Insta feed goes here:</h3>
+<div id="instafeed"></div>
     
 </body>    
     
